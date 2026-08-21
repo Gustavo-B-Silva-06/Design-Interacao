@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Menus - Interação Web</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variaveis.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Trabalhos de Interação Web</h1>
+    </header>
+
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="index.html">Apresentação</a></li>
+            <li><a href="editor.html">Editor de Menus (T1)</a></li>
+            <li><a href="#">Trabalho 2</a></li>
+            <li><a href="#">Trabalho 3</a></li>
+        </ul>
+    </nav>
+
+    <main class="container-editor">
+
+        <section class="formulario-edicao">
+            <h2>Configurações do Menu</h2>
+            <form id="form-menu" onsubmit="event.preventDefault()">
+                <div class="grupo-input">
+                    <label for="cor-fundo">Cor de Fundo do Menu:</label>
+                    <input type="color" id="cor-fundo" value="#2c3e50">
+                </div>
+                
+                <div class="grupo-input">
+                    <label for="cor-texto">Cor do Texto dos Itens:</label>
+                    <input type="color" id="cor-texto" value="#ffffff">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="espacamento">Espaçamento dos Itens (px):</label>
+                    <input type="number" id="espacamento" value="15" min="5" max="50">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="url-imagem">URL de uma Imagem para o Menu:</label>
+                    <input type="url" id="url-imagem" placeholder="https://exemplo.com/imagem.png">
+                </div>
+
+                <div class="controles-itens">
+                    <h3>Gerenciar Itens</h3>
+                    <div class="grupo-input">
+                        <label for="novo-item">Nome do Novo Item:</label>
+                        <input type="text" id="novo-item" placeholder="Ex: Contato">
+                    </div>
+                    <button type="button" id="btn-adicionar">Adicionar Item</button>
+                    <button type="button" id="btn-remover">Remover Último Item</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="visualizacao-menu">
+            <h2>Visualização em Tempo Real</h2>
+            <div id="area-menu-gerado">
+                <img id="imagem-menu" src="" alt="Imagem do menu" style="display: none; max-width: 100px;">
+                <nav id="menu-dinamico">
+                    <ul id="lista-dinamica">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido para a disciplina de Interação Web - 2026</p>
+    </footer>
+
+    <script src="js/editor.js"></script>
+</body>
+</html>
