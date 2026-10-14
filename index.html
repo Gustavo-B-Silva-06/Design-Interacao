@@ -5,42 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apresentação - Interação Web</title>
     <link rel="icon" href="data:,">
+    
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variaveis.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/components.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Trabalhos de Interação Web</h1>
-    </header>
 
+    <my-header>
+        <span slot="titulo">Portfólio de Interação Web</span>
+    </my-header>
 
-    <nav class="menu-principal">
-        <ul>
-            <li><a href="index.html">Apresentação</a></li>
-            <li><a href="editor.html">Editor de Menus (T1)</a></li>
-            <li><a href="#">Trabalho 2</a></li>
-            <li><a href="#">Trabalho 3</a></li>
-        </ul>
-    </nav>
-
+    <my-nav></my-nav>
 
     <main class="container-apresentacao">
         <section class="conteudo-principal">
             <h2>Bem-vindo ao Portfólio da Disciplina</h2>
+            <p>Este site foi desenvolvido para organizar e apresentar os trabalhos práticos da disciplina de <strong>Interação Web</strong>. Ao longo do semestre, os demais trabalhos da disciplina serão adicionados a este site e disponibilizados no menu de navegação.</p>
             
-            <p>Este site foi desenvolvido para organizar e apresentar os trabalhos práticos da disciplina de <strong>Design de Interação</strong>. Ao longo do semestre, os demais trabalhos da disciplina serão adicionados a este site e disponibilizados no menu de navegação.</p>
+                <figure class="figura-explicativa">
+                    <img src="img/site.png" alt="Ilustração mostrando que o site é um repositório para vários trabalhos">
+                    <figcaption>Figura 1: Representação visual do propósito do site, agregando todos os projetos do semestre.</figcaption>
+                </figure>
             
-            <figure class="figura-explicativa">
-                <img src="img/site.png" alt="Ilustração mostrando que o site é um repositório para vários trabalhos">
-                <figcaption>Figura 1: Representação visual do propósito do site, agregando todos os projetos do semestre.</figcaption>
-            </figure>
-            
+            <p>O primeiro trabalho consiste em um Editor de Menus interativo. O segundo trabalho é um sistema de Prova On-line encapsulado em Shadow DOM.</p>
         </section>
     </main>
 
-    <footer>
-        <p>Desenvolvido por Gustavo Silva para a disciplina de Design de Interação - 2026</p>
-    </footer>
+    <my-footer></my-footer>
 </body>
 </html>

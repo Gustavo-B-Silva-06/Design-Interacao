@@ -3,38 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editor de Menus - Design de Interação</title>
+    <title>Editor de Menus - Interação Web</title>
+    <link rel="icon" href="data:,">
+    
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variaveis.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/components.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Trabalhos de Design de Interação</h1>
-    </header>
+    <my-header>
+        <span slot="titulo">Editor de Menus (T1)</span>
+    </my-header>
 
-    <nav class="menu-principal">
-        <ul>
-            <li><a href="index.html">Apresentação</a></li>
-            <li><a href="editor.html">Editor de Menus (T1)</a></li>
-            <li><a href="#">Trabalho 2</a></li>
-            <li><a href="#">Trabalho 3</a></li>
-        </ul>
-    </nav>
+    <my-nav></my-nav>
 
     <main class="container-editor">
-
         <section class="formulario-edicao">
             <h2>Configurações do Menu</h2>
             <form id="form-menu" onsubmit="event.preventDefault()">
                 <div class="grupo-input">
                     <label for="cor-fundo">Cor de Fundo do Menu:</label>
-                    <input type="color" id="cor-fundo" value="#2c3e50">
+                    <input type="color" id="cor-fundo" value="#1a1a1a">
                 </div>
                 
                 <div class="grupo-input">
                     <label for="cor-texto">Cor do Texto dos Itens:</label>
-                    <input type="color" id="cor-texto" value="#ffffff">
+                    <input type="color" id="cor-texto" value="#e0e0e0">
                 </div>
 
                 <div class="grupo-input">
@@ -62,7 +58,7 @@
         <section class="visualizacao-menu">
             <h2>Visualização em Tempo Real</h2>
             <div id="area-menu-gerado">
-                <img id="imagem-menu" src="" alt="Imagem do menu" style="display: none; max-width: 100px;">
+                <img id="imagem-menu" src="" alt="Imagem do menu" style="display: none; max-width: 100px; margin-bottom: 15px;">
                 <nav id="menu-dinamico">
                     <ul id="lista-dinamica">
                         <li><a href="#">Item 1</a></li>
@@ -73,9 +69,7 @@
         </section>
     </main>
 
-    <footer>
-        <p>Desenvolvido para a disciplina de Design de Interação - 2026</p>
-    </footer>
+    <my-footer></my-footer>
 
     <script src="js/editor.js"></script>
 </body>
